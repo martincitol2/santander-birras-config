@@ -23,6 +23,6 @@ webclient:
 
 weather:
   path: https://weatherbit-v1-mashape.p.rapidapi.com
-    config:
-      x-rapidapi-key: "79bc131957mshc1853eb9f480805p10edfdjsn7b553607fa63"
-      x-rapidapi-host: "weatherbit-v1-mashape.p.rapidapi.com"
+  config:
+    x-rapidapi-key: "79bc131957mshc1853eb9f480805p10edfdjsn7b553607fa63"
+    x-rapidapi-host: "weatherbit-v1-mashape.p.rapidapi.com"

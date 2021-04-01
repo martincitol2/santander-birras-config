@@ -1,0 +1,28 @@
+server:
+  port: 8001
+
+spring:
+  application:
+    name: ms-domain-weather-api
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      skipPattern: (^cleanup.*|.+favicon.*|.+management.*)
+    enabled: true
+  zipkin:
+    base-url: http://localhost:9411/
+    enabled: false
+
+springdoc:
+  show:
+    actuator: true
+
+webclient:
+  timeout: 5000
+
+weather:
+  path: https://weatherbit-v1-mashape.p.rapidapi.com
+    config:
+      x-rapidapi-key: "79bc131957mshc1853eb9f480805p10edfdjsn7b553607fa63"
+      x-rapidapi-host: "weatherbit-v1-mashape.p.rapidapi.com"

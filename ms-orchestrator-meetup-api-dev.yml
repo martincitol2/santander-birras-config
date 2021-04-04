@@ -1,0 +1,35 @@
+server:
+  port: 9001
+
+spring:
+  application:
+    name: ms-orchestrator-meetup-api
+  sleuth:
+    sampler:
+      probability: 1.0
+    web:
+      skipPattern: (^cleanup.*|.+favicon.*|.+management.*)
+    enabled: true
+  zipkin:
+    base-url: http://localhost:9411/
+    enabled: false
+
+springdoc:
+  show:
+    actuator: true
+
+feign:
+  path:
+    weather: http://localhost:8001
+    meetup: http://localhost:8002
+
+meetup:
+  domain-api:
+    meetup:
+      attempts: 2
+      delay: 1000
+      multiplier: 2
+    weather:
+      attempts: 2
+      delay: 1000
+      multiplier: 2
